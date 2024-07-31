@@ -1,4 +1,4 @@
-import { router } from "expo-router";
+import { Link, router } from "expo-router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import React, { Component, useRef, useState } from "react";
 import * as AppleAuthentication from "expo-apple-authentication";
@@ -7,12 +7,13 @@ import Button from "@/components/buttons/Button";
 import { StatusBar } from "expo-status-bar";
 import KeyboardAwareTextInput from "@/components/textfields/TextField";
 import Spacer from "@/components/Spacer";
+import commonStyles from "../styles";
 export default function SignIn() {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const { signIn } = useSession();
   return (
-    <View style={styles.continer}>
+    <View style={commonStyles.continer}>
       <Text style={{ fontSize: 30, fontWeight: "bold", marginBottom: 10 }}>
         Sign In!
       </Text>
@@ -30,6 +31,7 @@ export default function SignIn() {
         secureTextEntry={true}
         placeholder="type your email"
       />
+      <Link href="/(auth)/sign-up">I don't have accounts</Link>
       <Spacer height={20} />
       <Button label="LOGIN" onPressFunction={() => {}} />
       <AppleAuthentication.AppleAuthenticationButton
@@ -62,13 +64,6 @@ export default function SignIn() {
 }
 
 const styles = StyleSheet.create({
-  continer: {
-    display: "flex",
-    flex: 1,
-    backgroundColor: "#FFF",
-    alignItems: "center",
-    justifyContent: "center",
-  },
   button: {
     width: 200,
     height: 44,

@@ -14,20 +14,28 @@
     },
     "ios": {
       "supportsTablet": true,
-      "usesAppleSignIn": true
+      "usesAppleSignIn": true,
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "bundleIdentifier": "com.shinsieon.coinbot"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "googleServicesFile": "./google-services.json",
+      "package": "com.shinsieon.coinbot"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
-    "plugins": ["expo-router", "expo-apple-authentication"],
+    "plugins": [
+      "@react-native-google-signin/google-signin",
+      "expo-router",
+      "expo-apple-authentication"
+    ],
     "experiments": {
       "typedRoutes": true
     }
