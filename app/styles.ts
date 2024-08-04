@@ -22,6 +22,17 @@ const commonStyles = StyleSheet.create({
     color: "#FFFFFF",
     textAlign: "center",
   },
+  errorText: {
+    color: "red",
+    marginBottom: 16,
+    width: "100%",
+  },
+  label: {
+    width: "100%",
+    marginBottom: 5,
+    fontSize: 16,
+    fontWeight: "bold",
+  },
 });
 
 export default commonStyles;

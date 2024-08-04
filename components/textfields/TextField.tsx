@@ -1,3 +1,4 @@
+import commonStyles from "@/app/styles";
 import {
   Keyboard,
   KeyboardAvoidingView,
@@ -29,7 +30,7 @@ const TextField = ({
 }: TextFieldProps) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>{label}</Text>
+      <Text style={commonStyles.label}>{label}</Text>
       <TextInput
         value={value}
         onChangeText={onChangeText}
@@ -77,12 +78,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 3,
-  },
-  label: {
-    width: "100%",
-    marginBottom: 5,
-    fontSize: 16,
-    fontWeight: "bold",
   },
   input: {
     padding: 10,

@@ -1,4 +1,4 @@
-import { Link, router } from "expo-router";
+import { Link } from "expo-router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import React, { Component, useRef, useState } from "react";
 import * as AppleAuthentication from "expo-apple-authentication";
